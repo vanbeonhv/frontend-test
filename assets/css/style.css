@@ -157,7 +157,7 @@ header {
   /* height: 500px; */
   background-color: #fff;
   padding: 0 5%;
-  margin: 120px 0;
+  margin: 120px 0 240px 0;
   display: block;
 }
 
@@ -176,7 +176,7 @@ header {
   width: 40%;
   text-align: center;
   float: right;
-  padding: 0 5%;
+  padding: 0 10%;
   height: 100%;
   position: absolute;
   right: 0;
@@ -191,11 +191,14 @@ header {
 }
 .project__detail--header {
   font-weight: 400;
-  font-size: 24px;
+  font-size: 32px;
   color: #1f2932;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
+
 .project__detail--body {
+  font-size: 20px;
   color: #9ca2af;
   line-height: 1.5;
 }
@@ -203,29 +206,48 @@ header {
 .project__second-detail {
   display: block;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .project__detail--second-image {
   width: 50%;
-  float: left;
 }
 
 .project__detail--second-description {
   width: 50%;
   text-align: center;
-  float: right;
-  padding: 0 5%;
+  padding: 0 10%;
   height: 100%;
   position: absolute;
-  right: 0;
+  /* right: 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #000;
+}
+
+.project__detail--second-description::after {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  bottom: -100px;
+  right: 0;
+  height: 100px;
+  width: 100%;
 }
 .project__detail--second-header {
+  color: #fffee9;
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 .project__detail--second-body {
+  font-size: 20px;
+  color: #858178;
+  line-height: 1.5;
+  margin-bottom: 50px;
 }
 #contact {
   height: 1000px;
@@ -277,4 +299,14 @@ footer {
   color: #7d8283;
   text-align: center;
   line-height: 200px;
+}
+
+.float-right {
+  float: right;
+  right: 0;
+}
+
+.float-left {
+  float: left;
+  left: 0;
 }
