@@ -82,13 +82,14 @@
           </div>
           <div class="float-clear"></div>
         </div>
+
         <div class="project__second-detail">
           <img
-            class="project__detail--second-image float-left"
+            class="project__detail--second-image"
             src="./assets/img/demo-image-01.jpg"
             alt="project 2"
           />
-          <div class="project__detail--second-description float-right">
+          <div class="project__detail--second-description">
             <h4 class="project__detail--second-header">Misty</h4>
             <p class="project__detail--second-body">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
@@ -116,10 +117,7 @@
               felis, ultrices sit amet bibendum id, maximus a dui. Donec quis
               massa eget libero auctor vulputate at eget nibh. Nam elementum
               mauris sed turpis imperdiet facilisis. In justo sem, imperdiet id
-              vestibulum in, ullamcorper lobortis tellus. Integer commodo diam
-              ac iaculis porttitor. Aenean sed turpis vitae quam cursus mollis
-              quis nec augue. Nulla eget ipsum in enim imperdiet efficitur. Nam
-              quam sem, dapibus ut convallis vel, convallis eget nulla.
+              vestibulum in, ullamcorper lobortis tellus.
             </p>
           </div>
           <img
@@ -139,10 +137,16 @@
           <div class="contact__content--body">
             <input
               type="email"
+              name="email"
               class="contact__content--input"
               placeholder="enter email address..."
+              oninput="checkValue()"
             />
-            <button disabled class="contact__content--btn disabled-btn">
+            <button
+              type="button"
+              disabled
+              class="contact__content--btn disabled-btn"
+            >
               notify me!
             </button>
           </div>
@@ -153,5 +157,19 @@
         <p class="footer__copyright">Copyright © Your website 2022</p>
       </footer>
     </div>
+    <script>
+      const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      const emailInput = document.querySelector('.contact__content--input');
+      const sendBtn = document.querySelector('.contact__content--btn');
+      const checkValue = () => {
+        if (emailInput.value.match(emailRegex)) {
+          sendBtn.classList.remove('disabled-btn');
+          sendBtn.removeAttribute('disabled');
+        } else {
+          sendBtn.classList.add('disabled-btn');
+          sendBtn.setAttribute('disabled', '');
+        }
+      };
+    </script>
   </body>
 </html>
