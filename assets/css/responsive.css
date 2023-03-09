@@ -1,0 +1,149 @@
+@media only screen and (max-width: 640px) {
+  header {
+    padding: 0 5%;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 100px;
+  }
+  .nav__links {
+    background-color: #fff;
+    border-top: solid 1px #64a19d;
+    border-bottom: solid 1px #64a19d;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    width: 100vw;
+    text-align: center;
+    display: none;
+  }
+
+  .nav__links li {
+    padding: 10px 0;
+  }
+
+  .nav__links li a {
+    width: 100%;
+    margin: 0;
+  }
+  .nav__links li a:active {
+    background-color: #b6dfdd;
+  }
+  .menu-btn {
+    padding: 16px;
+    border: solid 1px #64a19d;
+    border-radius: 5px;
+    display: block;
+    font-size: 20px;
+    color: #64a19d;
+    background-color: #fff;
+    /* margin: 20px auto; */
+    transition: 0.5s;
+  }
+  .menu-icon {
+    color: #64a19d;
+    margin-left: 2px;
+  }
+
+  .menu-btn .open-icon {
+    display: inline;
+  }
+
+  .menu-btn .close-icon {
+    display: none;
+    margin-left: 7px;
+  }
+  .nav__links li {
+    display: block;
+  }
+
+  #description {
+    height: calc(100vh - 100px);
+  }
+  .description__text-content {
+    top: 50%;
+    width: 80%;
+  }
+  .description__text-content--header {
+    font-size: 52px;
+  }
+  .description__text-content--body {
+    padding: 0 5%;
+    margin-bottom: 10%;
+    font-size: 16px;
+  }
+  .description__text-content--btn {
+    padding: 30px 40px;
+  }
+  .about__text-content {
+    width: 100%;
+  }
+  .about__text-content--body {
+    padding: 0 10%;
+  }
+
+  .project__detail {
+    display: block;
+    margin-bottom: 0;
+  }
+  .project__detail--image,
+  .project__detail--second-image {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .project__detail--description {
+    width: 100%;
+  }
+  .project__detail--header {
+    font-size: 28;
+    margin-top: 75px;
+  }
+
+  .project__detail--body,
+  .project__detail--second-body {
+    font-size: 16px;
+  }
+  .project__second-detail {
+    display: block;
+    margin-top: 75px;
+  }
+  .project__detail--second-description {
+    width: 100%;
+    margin-top: -6px;
+  }
+
+  .contact__content {
+    padding: 0 10%;
+  }
+
+  .contact__content--body {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact__content--title {
+    font-size: 24px;
+    font-weight: 100;
+  }
+  .contact__content--input {
+    width: 40%;
+  }
+  .contact__content--btn {
+    width: 50%;
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .contact__content--title {
+    font-size: 20px;
+  }
+  .contact__content--btn {
+    padding: 15px 20px;
+  }
+  .contact__content--input {
+    padding: 20px;
+  }
+}

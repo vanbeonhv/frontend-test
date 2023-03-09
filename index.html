@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <script
       src="https://kit.fontawesome.com/f94082a83d.js"
       crossorigin="anonymous"
@@ -22,6 +23,11 @@
     <div id="main">
       <header>
         <a href="#" class="logo-title">Entry Test</a>
+        <button class="menu-btn" type="button">
+          Menu
+          <i class="menu-icon open-icon fa-solid fa-bars"></i>
+          <i class="menu-icon close-icon fa-solid fa-xmark"></i>
+        </button>
         <nav>
           <ul class="nav__links">
             <li><a href="#about">About</a></li>
@@ -63,11 +69,9 @@
       </section>
       <section id="projects">
         <div class="project__detail">
-          <img
-            class="project__detail--image"
-            src="./assets/img/bg-masthead.jpg"
-            alt="project 1"
-          />
+          <div class="project__detail--image">
+            <img src="./assets/img/bg-masthead.jpg" alt="project 1" />
+          </div>
           <div class="project__detail--description">
             <h4 class="project__detail--header">Shoreline</h4>
             <p class="project__detail--body">
@@ -80,15 +84,12 @@
               hac habitasse platea dictumst.
             </p>
           </div>
-          <div class="float-clear"></div>
         </div>
 
         <div class="project__second-detail">
-          <img
-            class="project__detail--second-image"
-            src="./assets/img/demo-image-01.jpg"
-            alt="project 2"
-          />
+          <div class="project__detail--second-image">
+            <img src="./assets/img/demo-image-01.jpg" alt="project 2" />
+          </div>
           <div class="project__detail--second-description">
             <h4 class="project__detail--second-header">Misty</h4>
             <p class="project__detail--second-body">
@@ -98,14 +99,16 @@
               quis dignissim ante, nec sollicitudin dolor. In in purus nec est
               porttitor consequat. Fusce tempor non justo tempus suscipit. Ut
               maximus vitae elit quis pulvinar. Sed suscipit sodales orci,
-              eleifend dictum tortor. Vestibulum sit amet condimentum nisi.
-              Morbi laoreet venenatis tellus, et bibendum purus maximus mollis.
+              eleifend dictum tortor.
             </p>
           </div>
           <div class="float-clear"></div>
         </div>
-        <div class="project__second-detail">
-          <div class="project__detail--second-description float-left">
+        <div class="project__second-detail row-reverse">
+          <div class="project__detail--second-image">
+            <img src="./assets/img/demo-image-02.jpg" alt="project 2" />
+          </div>
+          <div class="project__detail--second-description">
             <h4 class="project__detail--second-header">Mountains</h4>
             <p class="project__detail--second-body">
               Donec tristique sodales hendrerit. Proin justo lacus, pulvinar ac
@@ -114,18 +117,9 @@
               eros, non volutpat sem euismod at. Morbi posuere, libero et
               eleifend luctus, arcu augue varius mauris, nec fringilla lectus
               lorem quis neque. Phasellus non dictum metus. Maecenas nulla
-              felis, ultrices sit amet bibendum id, maximus a dui. Donec quis
-              massa eget libero auctor vulputate at eget nibh. Nam elementum
-              mauris sed turpis imperdiet facilisis. In justo sem, imperdiet id
-              vestibulum in, ullamcorper lobortis tellus.
+              felis, ultrices sit amet bibendum id, maximus a dui.
             </p>
           </div>
-          <img
-            class="project__detail--second-image float-right"
-            src="./assets/img/demo-image-02.jpg"
-            alt="project 2"
-          />
-          <div class="float-clear"></div>
         </div>
       </section>
       <section id="contact">
@@ -157,19 +151,6 @@
         <p class="footer__copyright">Copyright © Your website 2022</p>
       </footer>
     </div>
-    <script>
-      const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      const emailInput = document.querySelector('.contact__content--input');
-      const sendBtn = document.querySelector('.contact__content--btn');
-      const checkValue = () => {
-        if (emailInput.value.match(emailRegex)) {
-          sendBtn.classList.remove('disabled-btn');
-          sendBtn.removeAttribute('disabled');
-        } else {
-          sendBtn.classList.add('disabled-btn');
-          sendBtn.setAttribute('disabled', '');
-        }
-      };
-    </script>
+    <script src="app.js"></script>
   </body>
 </html>
