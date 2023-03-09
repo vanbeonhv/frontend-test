@@ -254,7 +254,7 @@ header {
 }
 #contact {
   height: 1000px;
-  background: url(/assets/img/bg-signup.jpg) 50% 70% / cover no-repeat;
+  background: url(../img/bg-signup.jpg) 50% 70% / cover no-repeat;
   position: relative;
   text-align: center;
   z-index: 1;
