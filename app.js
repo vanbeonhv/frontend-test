@@ -32,7 +32,7 @@ menuBtn.onclick = () => {
   }
 };
 console.log(nav.clientHeight);
-if (nav.clientHeight !== 52) {
+if (nav.clientHeight !== 52 || nav.clientHeight !== 53) {
   for (let i = 0; i < linksList.length; i++) {
     linksList[i].onclick = () => {
       nav.style.display = 'none';
